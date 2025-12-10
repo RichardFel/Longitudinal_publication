@@ -69,7 +69,16 @@ def process_data(settings):
                     results['endtime'] = endtime
                     results = characteristics(
                         results, data['activities [1min]'].values)
-
+                    
+                    # ANNET: PROCESS PAINSCORE HERE
+                    # Try:
+                    # LOAD PAINSCORE FILE:
+                    # painscores = settings['DATA_DIR']}/raw_data/{subject}/painscore/painscores.csv
+                    # Calculate characteristics
+                    # results = characteristics_pain(painscores, results, day, time=None)
+                    # Except: 
+                    # pass 
+                    
                     # data to dataframe
                     results_df = pd.DataFrame.from_dict(
                         results, orient='index').transpose()
