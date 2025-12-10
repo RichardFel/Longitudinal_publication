@@ -21,7 +21,7 @@ sdist/
 var/
 wheels/
 # data/
-*.csv
+# *.csv
 *.pdf
 *.xlsx
 *.png
